@@ -1,5 +1,12 @@
+import Test from "./common/components/test/Test";
+import ToastProvider from "./common/providers/Toast.provider";
+
 function App() {
-  return <div>Mantap</div>;
+  return (
+    <ToastProvider>
+      <Test />
+    </ToastProvider>
+  );
 }
 
 export default App;
