@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
  * @param {VoidFunction} callback function to execute
  * @param {number} [delay=500] amount of delay in ms, defaults to 500
  */
-const useTimeout = (callback: VoidFunction, delay: number = 500) => {
+const useTimeout = (callback: VoidFunction, delay = 500) => {
   const callbackRef = useRef<VoidFunction | null>(null);
 
   useEffect(() => {

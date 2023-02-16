@@ -6,11 +6,11 @@ interface IToastIcon {
   type: ToastType;
 }
 
-const ToastIcon = ({ type }: IToastIcon) => {
+function ToastIcon({ type }: IToastIcon) {
   const component = getIcon[type];
   return createElement(component.icon, {
     className: `w-7 h-7 my-auto ${component.color}`,
   });
-};
+}
 
 export default ToastIcon;

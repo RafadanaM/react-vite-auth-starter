@@ -1,11 +1,12 @@
 import useToast from "../../hooks/useToast";
 
-const Test = () => {
+function Test() {
   const { addToast } = useToast();
   return (
     <div>
       <p>test</p>
       <button
+        type="button"
         onClick={() =>
           addToast({
             type: "info",
@@ -18,6 +19,6 @@ const Test = () => {
       </button>
     </div>
   );
-};
+}
 
 export default Test;

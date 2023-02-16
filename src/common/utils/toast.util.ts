@@ -1,8 +1,8 @@
-import { ToastPosition, ToastType } from "../interfaces/toast.interface";
 import { ReactComponent as Success } from "Assets/check-circle.svg";
 import { ReactComponent as Info } from "Assets/info-circle.svg";
 import { ReactComponent as Warning } from "Assets/exclamation-circle.svg";
 import { ReactComponent as Error } from "Assets/x-circle.svg";
+import { ToastPosition, ToastType } from "../interfaces/toast.interface";
 
 /**
  * get animation properties given a toast position
@@ -12,9 +12,9 @@ import { ReactComponent as Error } from "Assets/x-circle.svg";
 const getAnimation = (
   position: ToastPosition
 ): { enter: string; enterActive: string; exit: string; exitActive: string } => {
-  let initialPosition: string,
-    finalEnterPosition: string,
-    initialExitPosition: string;
+  let initialPosition: string;
+  let finalEnterPosition: string;
+  let initialExitPosition: string;
 
   // IDK why I have to do this horribleness to make the animation work
   if (position === "bottom-left" || position === "top-left") {

@@ -8,14 +8,7 @@ interface IToast extends IToastProperties {
   removeToast: (toastId: string) => void;
 }
 
-const Toast = ({
-  id,
-  type,
-  title,
-  description,
-  nodeRef,
-  removeToast,
-}: IToast) => {
+function Toast({ id, type, title, description, nodeRef, removeToast }: IToast) {
   useTimeout(() => {
     removeToast(id);
   }, 2000);
@@ -37,6 +30,6 @@ const Toast = ({
       />
     </div>
   );
-};
+}
 
 export default Toast;
