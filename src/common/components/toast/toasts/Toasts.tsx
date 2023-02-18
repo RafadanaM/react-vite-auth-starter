@@ -2,9 +2,9 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import {
   IToastProperties,
   ToastPosition,
-} from "../../interfaces/toast.interface";
-import Toast from "./Toast";
-import { getAnimation } from "../../utils/toast.util";
+} from "../../../interfaces/toast.interface";
+import Toast from "../toast/Toast";
+import { getAnimation } from "../../../utils/toast/toast.util";
 
 interface IToasts {
   toasts: IToastProperties[];

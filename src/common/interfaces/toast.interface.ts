@@ -11,6 +11,7 @@ export type ToastPosition =
   | "top-middle";
 
 export interface IToastOption {
+  id?: string;
   type: ToastType;
   title: string;
   description: string;
