@@ -6,11 +6,13 @@ import "./index.css";
 import ToastNotification from "./common/components/toast/toastNotification/ToastNotification";
 import ToastProvider from "./common/providers/toastProvider/Toast.provider";
 import Root from "./routes/Root";
+import ErrorPage from "./routes/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    errorElement: <ErrorPage />,
   },
 ]);
 
