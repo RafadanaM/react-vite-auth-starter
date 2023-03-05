@@ -6,13 +6,18 @@ import "./index.css";
 import ToastNotification from "./common/components/toast/toastNotification/ToastNotification";
 import ToastProvider from "./common/providers/toastProvider/Toast.provider";
 import Root from "./routes/Root";
-import ErrorPage from "./routes/ErrorPage";
+import Error from "./routes/Error";
+import Home from "./routes/Home";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-    errorElement: <ErrorPage />,
+    errorElement: <Error />,
+    children: [
+      { path: "", element: <Home /> },
+      { path: "contacts", element: <Home /> },
+    ],
   },
 ]);
 
